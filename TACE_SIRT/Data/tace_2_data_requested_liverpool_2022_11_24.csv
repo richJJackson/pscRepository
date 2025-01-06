@@ -1,0 +1,314 @@
+﻿Patient TNO,Patient Gender,Age in years,AFP,Aetiology: Does the patient have cirrhosis?,Aetiology: Hepatitis B,Aetiology: Hepatitis C,Aetiology: Alcohol,Aetiology: Alcohol: Other,Aetiology: Alcohol: Other: Specify,FBC & Serum Biochemistry: Bilirubin,FBC & Serum Biochemistry: Albumin,Disease Assessment: Focality,Disease Assessment: RECIST: Target Lesion 1: Measurement Largest Diameter,Disease Assessment: RECIST: Target Lesion 2: Measurement Largest Diameter,Vascular invasion,Child-Pugh grade,Died?,Survival time in days,Treatment group
+1,Male,74.023272,4.96,0,0,0,0,NA,NA,12,45,Multifocal,4.6,1.9,0,A,1,912,TACE + Sorafenib
+2,Male,58.414784,8.26,1,0,1,0,NA,NA,20,39,Unifocal,7.2,NA,0,A,1,857,TACE + Placebo
+3,Male,75.901437,5411.57,1,0,1,0,NA,NA,13,35,Multifocal,3.4,1.8,0,A,1,500,TACE + Placebo
+4,Female,50.806297,57.85,0,0,0,0,NA,NA,4,45,Multifocal,6,2.5,0,A,1,214,TACE + Sorafenib
+5,Male,58.53525,138.02,1,1,1,1,1,History,23,36,Multifocal,3,6,0,A,1,218,TACE + Placebo
+6,Male,70.171116,8.26,1,0,0,1,NA,NA,22,34,Unifocal,5.2,NA,0,A,1,218,TACE + Sorafenib
+7,Male,70.757016,4.96,1,0,0,1,1,Clinical History,24,40,Multifocal,7.5,6,0,A,1,1533,TACE + Placebo
+8,Male,59.537303,9.09,1,1,0,0,NA,NA,6,44,Multifocal,3.5,2.5,0,A,1,290,TACE + Sorafenib
+9,Male,75.874059,8,1,0,0,0,NA,NA,22,42,Unifocal,2.7,2.2,0,A,0,651,TACE + Placebo
+10,Male,61.921971,67.77,1,0,1,1,1,History ,39,40,Multifocal,14,1.3,0,A,1,110,TACE + Sorafenib
+11,Male,55.080082,9917.35,1,0,1,0,NA,NA,6,45,Multifocal,8.6,NA,0,A,1,176,TACE + Sorafenib
+12,Male,43.49076,2.24,0,NA,NA,NA,NA,NA,12,40,Multifocal,1.4,NA,0,A,0,942,TACE + Placebo
+13,Male,49.368925,27,1,0,1,0,NA,NA,8,45,Multifocal,4.2,7.8,0,A,1,373,TACE + Sorafenib
+14,Male,56.013689,6,1,0,1,0,NA,NA,12,48,Multifocal,9.8,4.1,0,A,1,279,TACE + Placebo
+15,Female,72.303901,17.69,1,0,0,0,NA,NA,13,37,Multifocal,5.2,NA,0,A,1,697,TACE + Placebo
+16,Male,70.365503,7.43,0,NA,NA,NA,NA,NA,12,29,Multifocal,10.8,1.9,0,A,1,573,TACE + Sorafenib
+17,Male,67.931554,5,1,1,0,1,1,2.5 units per day,11,42,Multifocal,4,2.4,0,A,0,381,TACE + Sorafenib
+18,Male,46.8282,2,0,NA,NA,NA,NA,NA,10,43,Multifocal,23,1.2,0,A,0,257,TACE + Placebo
+19,Male,75.345654,437.2,1,1,0,0,NA,NA,9,43,Multifocal,7.6,1.8,0,A,1,731,TACE + Sorafenib
+20,Female,70.31896,263,1,0,0,0,NA,NA,10,31,Unifocal,6.2,NA,0,A,1,449,TACE + Placebo
+21,Female,70.130048,10,1,0,0,1,1,medical history,13,42,Unifocal,4,NA,0,A,0,1775,TACE + Sorafenib
+22,Male,70.406571,14.5,1,1,0,1,1,Clinical History ,8,38,Unifocal,6.2,1.6,0,A,1,164,TACE + Placebo
+23,Male,68.156057,1712.4,0,0,0,0,NA,NA,0.5,36,Multifocal,13,NA,0,A,1,229,TACE + Placebo
+24,Male,64.605065,3.2,1,0,1,1,1,History,16,45,Multifocal,4.8,NA,0,A,0,1921,TACE + Sorafenib
+25,Male,66.072553,273.55,1,0,0,1,1,history,8,38,Multifocal,15,3.7,0,A,1,858,TACE + Placebo
+26,Male,59.879535,3794,1,0,1,0,NA,NA,19,38,Multifocal,4.7,1.5,0,A,1,579,TACE + Sorafenib
+27,Male,53.059548,21477,1,0,1,1,1,History ,17,31,Multifocal,7,7,0,A,1,235,TACE + Sorafenib
+28,Male,65.900068,12,1,0,0,1,1,History,13,39,Multifocal,5.5,NA,0,A,0,154,TACE + Sorafenib
+29,Male,65.771389,7736,1,0,0,0,NA,NA,18,37,Multifocal,4.4,2.9,0,A,0,313,TACE + Placebo
+30,Male,72.361396,311,0,0,0,0,NA,NA,7,37,Unifocal,18.1,NA,0,A,1,435,TACE + Placebo
+31,Male,64.722793,146,1,0,0,0,NA,NA,18,30,Multifocal,7.5,NA,0,A,1,137,TACE + Sorafenib
+32,Male,64.558522,3.6,1,0,0,1,1,History ,27,35,Multifocal,2.3,3.8,0,A,1,1583,TACE + Placebo
+33,Male,73.486653,71000,0,NA,NA,NA,NA,NA,9,42,Unifocal,17.4,NA,0,A,1,194,TACE + Sorafenib
+34,Male,62.71321,29,1,0,1,1,1,Past alcohol excess,26,38,Multifocal,3.4,2.2,0,A,1,769,TACE + Placebo
+35,Male,80.503765,30,0,NA,NA,NA,NA,NA,13,48,Unifocal,7,NA,0,A,0,620,TACE + Sorafenib
+36,Male,74.373717,33,1,1,0,0,NA,NA,17,36,Multifocal,4,3.9,0,A,1,233,TACE + Placebo
+37,Male,53.448323,106,1,0,1,0,NA,NA,19,41,Multifocal,5.1,6.8,0,A,0,1039,TACE + Sorafenib
+38,Male,62.006845,920,1,0,1,1,1,History,9,32,Multifocal,4.2,2.9,0,A,0,1117,TACE + Placebo
+39,Male,65.314168,333,1,0,0,1,1,history,20,36,Multifocal,3.3,10.8,0,A,1,598,TACE + Placebo
+40,Male,66.885695,2.2,1,0,0,1,1,Clinical history,19,40,Multifocal,2.3,NA,0,A,1,816,TACE + Placebo
+41,Female,80.958248,39.9,1,0,0,0,1,Dr's Letter ,16,35,Multifocal,5,1.6,0,A,0,494,TACE + Sorafenib
+42,Male,54.140999,2,1,0,0,1,NA,NA,6,37,Unifocal,10.2,NA,0,A,1,13,TACE + Sorafenib
+43,Male,74.885695,10000,1,1,0,0,NA,NA,35,39,Multifocal,9.8,6.1,0,A,1,323,TACE + Placebo
+44,Male,79.370294,4,1,0,0,0,NA,NA,13,44,Multifocal,1.3,9,0,A,1,823,TACE + Placebo
+45,Male,61.730322,3,0,NA,NA,NA,NA,NA,15,47,Multifocal,5,1.6,0,A,1,304,TACE + Sorafenib
+46,Female,61.883641,248,0,NA,NA,NA,NA,NA,9,46,Multifocal,14.6,2.5,0,A,0,435,TACE + Placebo
+47,Female,71.827515,47,1,0,0,0,NA,NA,10,34,Unifocal,7,NA,0,A,1,380,TACE + Sorafenib
+48,Female,79.077344,328,1,0,0,0,NA,NA,11,42,Unifocal,5,NA,0,A,1,946,TACE + Sorafenib
+49,Male,79.572895,4.84,1,0,0,0,NA,NA,18,40,Multifocal,8.2,NA,0,A,1,1077,TACE + Sorafenib
+50,Male,75.682409,324,0,NA,NA,NA,NA,NA,7,40,Multifocal,13.8,1.1,0,A,0,317,TACE + Sorafenib
+51,Male,69.136208,1374,0,NA,NA,NA,NA,NA,11,37,Unifocal,20.1,NA,0,A,1,143,TACE + Placebo
+52,Male,62.3436,165,1,0,0,1,1,History,68,33,Multifocal,4.4,1.4,0,A,1,266,TACE + Placebo
+53,Male,64.741958,14,1,0,0,1,1,scan images,9,46,Unifocal,7.3,NA,0,A,0,226,TACE + Sorafenib
+54,Male,71.033539,3382,1,0,1,1,1,Admittance from patient,19,36,Multifocal,5.2,1.6,0,A,1,223,TACE + Placebo
+55,Male,66.726899,50000,0,NA,NA,NA,NA,NA,19,44,Multifocal,9.3,7.7,0,A,1,33,TACE + Sorafenib
+56,Male,50.970568,4864,1,0,1,0,NA,NA,13,34,Multifocal,4.2,2.7,0,A,1,69,TACE + Placebo
+57,Male,65.431896,16,1,0,0,0,NA,NA,16,41,Multifocal,5.8,3.6,0,A,1,1316,TACE + Placebo
+58,Male,83.033539,1,1,0,0,0,NA,NA,10,34,Unifocal,13,NA,0,A,1,439,TACE + Placebo
+59,Male,61.798768,10,1,0,1,0,NA,NA,9,43,Multifocal,5.2,4.1,0,A,1,567,TACE + Sorafenib
+60,Female,80.065708,5.2,1,0,1,0,NA,NA,8,43,Unifocal,1.6,NA,0,A,0,1718,TACE + Sorafenib
+61,Female,74.236824,33.7,0,0,0,0,NA,NA,6,43,Unifocal,1.6,NA,0,A,1,399,TACE + Placebo
+62,Male,68.544832,61,1,0,0,0,NA,NA,7,32,Unifocal,16.5,NA,0,A,1,173,TACE + Sorafenib
+63,Male,70.327173,13,0,0,0,0,NA,NA,14,45,Multifocal,12.7,4.5,0,A,0,336,TACE + Placebo
+64,Male,73.790554,41,1,0,0,0,NA,NA,15,37,Multifocal,7.5,3.5,0,A,0,413,TACE + Sorafenib
+65,Male,53.659138,5,1,0,0,0,NA,NA,24,38,Multifocal,3.5,NA,0,A,0,578,TACE + Sorafenib
+66,Male,64.654346,2.21,1,1,0,0,NA,NA,13,43,Multifocal,2.8,1.3,0,A,0,245,TACE + Placebo
+67,Male,78.759754,22,1,0,0,0,NA,NA,NA,NA,Multifocal,3.1,2.5,0,A,0,1485,TACE + Placebo
+68,Male,65.79603,3,1,0,0,1,1,History ,NA,27,Multifocal,17.7,NA,0,A,1,56,TACE + Sorafenib
+69,Male,65.653662,5,1,0,0,0,NA,NA,13,36,Multifocal,9,2.2,0,A,1,442,TACE + Placebo
+70,Male,65.09514,2,1,0,0,0,NA,NA,13,42,Multifocal,14.6,7.5,0,A,0,1588,TACE + Placebo
+71,Male,74.521561,7.89,0,NA,NA,NA,NA,NA,25,29,Multifocal,11,1.7,0,A,1,618,TACE + Placebo
+72,Male,69.6564,2,1,0,0,1,1,Patient admission,15,46,Multifocal,4.3,1,0,A,0,574,TACE + Sorafenib
+73,Male,54.488706,40700,0,NA,NA,NA,NA,NA,22,32,Multifocal,1.3,NA,0,A,1,215,TACE + Sorafenib
+74,Male,46.461328,3808,1,1,0,0,NA,NA,9,44,Unifocal,7,NA,0,A,0,245,TACE + Sorafenib
+75,Male,66.275154,5880,1,0,1,0,NA,NA,13,37,Multifocal,4.9,NA,0,A,0,442,TACE + Placebo
+76,Male,70.149213,5,1,0,0,0,NA,NA,10,45,Unifocal,2.6,1.8,0,A,0,1540,TACE + Sorafenib
+77,Male,55.348392,4.9,1,0,0,0,NA,NA,22,40,Multifocal,3.5,3.6,0,A,1,994,TACE + Sorafenib
+78,Male,78.368241,3,1,0,0,1,1,History ,14,36,Multifocal,2.5,2.4,0,A,1,1113,TACE + Placebo
+79,Male,72.205339,2,1,0,0,0,NA,NA,9,47,Unifocal,5.5,NA,0,A,1,1366,TACE + Placebo
+80,Female,74.899384,8172,0,0,0,0,1,verbal,6,44,Unifocal,5.7,NA,0,A,1,229,TACE + Placebo
+81,Male,70.332649,1,1,0,0,1,NA,NA,17,35,Multifocal,10.7,2.4,0,A,1,1462,TACE + Sorafenib
+82,Female,75.956194,5.2,1,0,0,0,NA,NA,11,44,Multifocal,5.5,NA,0,A,0,18,TACE + Placebo
+83,Male,47.638604,157,1,0,1,1,1,CT/USS,4,37,Multifocal,19.6,7.5,0,A,1,170,TACE + Sorafenib
+84,Male,50.228611,154,1,0,1,1,1,Patient history,15,34,NA,NA,NA,0,A,1,436,TACE + Sorafenib
+85,Male,71.096509,7,1,0,0,0,NA,NA,15,40,Multifocal,3.2,NA,0,A,1,987,TACE + Placebo
+86,Male,72.128679,50,1,0,0,1,1,History ,113,38,Multifocal,3.5,2.8,0,A,0,540,TACE + Placebo
+87,Male,77.763176,4216,1,0,0,0,NA,NA,5,37,Unifocal,18.1,NA,0,A,1,223,TACE + Sorafenib
+88,Male,72.881588,2227,1,0,0,1,1,past alcoholic excess ended 1989,10,41,Multifocal,4.5,3.6,0,A,0,168,TACE + Placebo
+89,Male,72.698152,2.8,1,0,0,1,1,History ,25,34,Multifocal,2.7,2.4,0,A,1,245,TACE + Sorafenib
+90,Male,53.177276,29.5,1,0,1,1,1,Clinical history taking,30,35,Multifocal,6.1,1.2,0,A,1,341,TACE + Placebo
+91,Male,67.682409,72,1,0,0,0,NA,NA,11,42,Multifocal,5.4,NA,0,A,1,436,TACE + Placebo
+92,Male,51.227926,1431,1,0,1,0,NA,NA,13,37,Unifocal,4.7,NA,0,A,1,306,TACE + Sorafenib
+93,Male,64.988364,39,1,0,0,0,1,non alcoholic cirrhosis,25,27,Multifocal,1.7,1.8,0,A,1,153,TACE + Sorafenib
+94,Male,74.893908,16,0,0,0,0,1,verbal ,26,45,Multifocal,8,3.6,0,A,0,266,TACE + Sorafenib
+95,Male,71.611225,214,1,0,0,0,NA,VERBAL,28,39,Multifocal,6.9,1.9,0,A,0,168,TACE + Placebo
+96,Male,48.090349,3.23,1,0,0,0,NA,NA,6,39,Multifocal,5.3,NA,0,A,0,70,TACE + Sorafenib
+97,Male,70.072553,20,0,NA,NA,NA,NA,NA,10,37,NA,NA,NA,0,A,1,495,TACE + Placebo
+98,Male,67.060917,6,1,0,0,1,1,From patient history,35,36,Multifocal,3.2,3,0,A,0,199,TACE + Placebo
+99,Male,71.110198,6,1,0,0,0,NA,NA,7,34,Unifocal,8.1,NA,0,A,1,909,TACE + Sorafenib
+100,Male,72.810404,4,1,0,0,0,NA,NA,10,34,Unifocal,5.8,NA,0,A,0,1260,TACE + Placebo
+101,Male,60.70089,144,0,NA,NA,NA,NA,NA,7,31,Unifocal,17.2,NA,0,A,1,648,TACE + Sorafenib
+102,Male,40.136893,4046,1,1,0,0,NA,NA,7,41,Unifocal,11,NA,0,A,1,309,TACE + Sorafenib
+103,Male,71.805613,171,1,0,1,1,1,Patient History ,25,36,Multifocal,3.7,4,0,A,0,956,TACE + Sorafenib
+104,Male,72.090349,174.8,1,0,0,0,NA,NA,13,44,Unifocal,4.6,NA,0,A,1,558,TACE + Placebo
+105,Male,61.913758,550,1,1,0,0,NA,NA,17,44,Multifocal,6.4,7,0,A,0,1439,TACE + Placebo
+106,Male,79.750856,77,1,0,0,0,NA,NA,30,42,Unifocal,6.8,NA,0,A,1,297,TACE + Sorafenib
+107,Male,58.666667,12,1,0,1,1,1,MEDICAL HISTORY,18,41,Unifocal,8.5,NA,0,A,1,780,TACE + Sorafenib
+108,Male,59.025325,97,1,0,0,1,1,Medical History,25,39,Multifocal,4.3,1.5,0,A,1,311,TACE + Placebo
+109,Male,70.461328,9,1,0,0,1,1,40 pints a week stopped 2007,29,40,Multifocal,3.3,1.9,0,A,1,315,TACE + Placebo
+110,Male,69.812457,12,1,0,0,1,1,Patient stated drinking excessively,13,39,Multifocal,3.7,2.2,0,A,0,14,TACE + Sorafenib
+111,Male,80.703628,1127,1,0,0,0,1,history,14,36,Multifocal,5.1,4.9,0,A,1,72,TACE + Sorafenib
+112,Male,55.425051,3515,1,1,1,0,NA,NA,5,43,Unifocal,4.7,NA,0,A,0,1190,TACE + Placebo
+113,Male,55.868583,5005,1,0,0,0,NA,NA,17,34,Unifocal,6.3,NA,0,A,1,360,TACE + Placebo
+114,Male,70.59822,23.4,1,0,0,1,1,Medical History ,18,39,Multifocal,1.5,1.3,0,A,1,552,TACE + Sorafenib
+115,Male,56.544832,11706,1,0,1,1,1,HISTORY,9,43,Multifocal,3.5,1.4,0,A,1,721,TACE + Sorafenib
+116,Male,87.660507,3,1,0,0,1,1,NASH,12,37,Multifocal,3.1,2.6,0,A,1,593,TACE + Placebo
+117,Male,63.498973,50,1,0,0,1,1,Medical History ,10,37,Multifocal,NA,NA,0,A,1,296,TACE + Placebo
+118,Male,71.397673,23183,0,0,0,0,NA,NA,32,38,Multifocal,18.7,2.5,0,A,1,82,TACE + Placebo
+119,Male,70.516085,3,0,1,0,0,NA,NA,12,47,Multifocal,12,1.2,0,A,1,790,TACE + Sorafenib
+120,Male,75.690623,241,0,NA,NA,NA,NA,NA,12,40,NA,NA,NA,0,A,0,530,TACE + Sorafenib
+121,Male,79.373032,3,0,NA,NA,NA,NA,NA,5,48,Multifocal,6.5,1.5,0,A,0,539,TACE + Placebo
+122,Male,70.143737,3,1,0,0,1,1,History ,35,41,Multifocal,5,2.8,0,A,0,36,TACE + Sorafenib
+123,Male,66.409309,136.6,1,0,1,1,1,History ,8,37,Multifocal,5.7,3.5,0,A,1,729,TACE + Placebo
+124,Female,63.370294,5,1,0,1,1,1,History of excess alcohol - no alcohol since 2007,18,39,Multifocal,5.8,2.7,0,A,1,130,TACE + Placebo
+125,Male,61.303217,253.8,0,NA,NA,NA,NA,NA,11,33,Unifocal,15.3,NA,0,A,1,180,TACE + Sorafenib
+126,Male,58.587269,4.13,1,0,1,1,1,verbal,17,32,Unifocal,6.1,5.9,0,A,1,281,TACE + Placebo
+127,Male,62.59822,94,1,0,0,1,1,Patient advise 20 units per week currently ,33,30,Multifocal,4.2,1.6,0,A,0,111,TACE + Sorafenib
+128,Male,76.769336,5,0,0,0,0,NA,NA,8,40,Multifocal,5.6,1,0,A,1,41,TACE + Sorafenib
+129,Male,73.149897,375,1,0,0,1,NA,NA,12,32,Multifocal,6.6,1.2,0,A,1,210,TACE + Placebo
+130,Male,58.729637,4,1,0,0,1,NA,NA,25,32,Multifocal,7.5,5.9,0,A,1,420,TACE + Sorafenib
+131,Female,74.778919,8,1,0,0,1,1,Patient History ,11,35,Unifocal,3,NA,0,A,0,1086,TACE + Placebo
+132,Male,75.937029,5871,1,0,0,0,NA,NA,8,44,Multifocal,6.4,5.4,0,A,1,116,TACE + Placebo
+133,Male,81.817933,23,1,0,0,0,NA,NA,15,44,Multifocal,3.7,4.4,0,A,0,1328,TACE + Placebo
+134,Male,70.182067,9,1,0,0,1,1,PATIENT HISTORY,12,39,Multifocal,2.6,1.7,0,A,1,376,TACE + Sorafenib
+135,Male,56.438056,46.5,0,NA,NA,NA,NA,NA,19,34,Multifocal,4.5,4.1,0,A,0,182,TACE + Placebo
+136,Male,73.708419,1522,1,0,0,1,1,History,18,36,Unifocal,5.1,1.6,0,A,1,611,TACE + Sorafenib
+137,Female,40.947296,100199,0,NA,NA,NA,NA,NA,4,36,Unifocal,14.5,NA,0,A,0,420,TACE + Sorafenib
+138,Male,75.797399,12.5,1,0,0,1,1,Clinical History taking,15,41,Unifocal,4.6,NA,0,A,1,483,TACE + Sorafenib
+139,Male,63.871321,133,1,0,0,1,1,Patient history,22,36,Multifocal,NA,NA,0,A,0,616,TACE + Placebo
+140,Male,70.329911,3982,0,NA,NA,NA,NA,NA,9,41,Multifocal,5.9,2.6,0,A,1,260,TACE + Sorafenib
+141,Male,55.266256,279,1,0,0,1,1,Excessive alcohol use stated.,34,38,Multifocal,3.6,4.9,0,A,0,68,TACE + Sorafenib
+142,Male,54.740589,6,1,0,0,0,NA,NA,20,42,Multifocal,4.2,1,0,A,1,812,TACE + Placebo
+143,Male,63.23614,22,1,0,1,1,1,history,12,36,Multifocal,6.8,NA,0,A,1,623,TACE + Placebo
+144,Male,59.181383,3,1,0,0,0,NA,NA,19,43,Unifocal,4.2,NA,0,A,0,112,TACE + Sorafenib
+145,Male,70.201232,5,1,0,0,0,NA,NA,10,42,Multifocal,1.6,1,0,A,1,641,TACE + Placebo
+146,Male,55.074606,177,1,0,1,0,NA,NA,21,35,Unifocal,10,NA,0,A,1,169,TACE + Sorafenib
+147,Male,69.927447,7,1,0,0,1,1,history,13,46,Unifocal,4,NA,0,A,0,585,TACE + Placebo
+148,Male,70.360027,3,1,0,0,1,1,History of excessive alcohol,12,48,Unifocal,3.8,NA,0,A,0,609,TACE + Sorafenib
+149,Male,59.112936,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,0,A,1,169,TACE + Placebo
+150,Male,64.731006,4,1,0,0,1,1,Patient history,13,38,Multifocal,9.2,NA,0,A,0,504,TACE + Sorafenib
+151,Male,64.451745,4,1,0,0,0,NA,NA,20,43,Multifocal,3.4,2.2,0,A,0,1176,TACE + Sorafenib
+152,Male,57.423682,42,1,0,1,1,1,Patient history of previous excess alcohol,12,33,Multifocal,7,NA,0,A,1,243,TACE + Placebo
+153,Female,71.5154,23,1,0,0,0,NA,NA,22,40,Unifocal,10.4,2,0,A,0,68,TACE + Sorafenib
+154,Female,68.780287,25,1,0,0,0,NA,NA,11,32,Unifocal,6.7,NA,0,A,1,879,TACE + Sorafenib
+155,Male,66.086242,197.6,1,0,1,1,1,History ,9,52,Multifocal,7.4,3.8,0,A,1,606,TACE + Placebo
+156,Male,85.998631,5,1,0,0,0,NA,NA,17,43,Multifocal,2.8,2.5,0,A,1,509,TACE + Placebo
+157,Male,64.134155,2,1,0,1,0,NA,NA,13,47,Unifocal,5.7,NA,0,A,0,1166,TACE + Sorafenib
+158,Male,70.86653,1,0,NA,NA,NA,NA,NA,41,38,Multifocal,9.6,NA,0,A,1,29,TACE + Placebo
+159,Male,71.203285,1090,1,0,0,1,1,medical history,15,40,Multifocal,10,9,0,A,1,50,TACE + Placebo
+160,Male,58.956879,236,1,0,1,1,1,Patient statement,18,36,Multifocal,11.8,2.1,0,A,1,179,TACE + Placebo
+161,Male,75.345654,3,1,0,0,1,1,History ,7,44,Unifocal,5.3,NA,0,A,0,1240,TACE + Sorafenib
+162,Male,61.897331,4820,1,0,0,0,NA,NA,25,28,Multifocal,5.1,2.7,0,A,1,97,TACE + Sorafenib
+163,Male,70.663929,30.43,1,0,0,1,1,Clinical Diagnosis Patient History,22,34,Multifocal,2.5,5.5,0,A,1,257,TACE + Sorafenib
+164,Male,58.324435,2,0,NA,NA,NA,NA,NA,10,47,Multifocal,4.4,2,0,A,0,98,TACE + Placebo
+165,Female,70.220397,20,1,0,0,0,NA,NA,18,40,Unifocal,6.7,NA,0,A,0,494,TACE + Sorafenib
+166,Male,75.542779,2,1,0,0,0,NA,NA,26,35,Multifocal,3.6,2,0,A,1,463,TACE + Placebo
+167,Male,75.772758,34,0,NA,NA,NA,NA,NA,8,40,Unifocal,6.4,NA,0,A,1,1013,TACE + Sorafenib
+168,Male,79.895962,209,1,0,0,1,1,History ,21,32,Multifocal,5,6,0,A,1,210,TACE + Placebo
+169,Male,75.468857,83,1,0,0,0,NA,NA,14,42,Multifocal,2.7,1.9,0,A,1,400,TACE + Sorafenib
+170,Female,78.05065,132,1,0,0,0,NA,NA,27,38,Unifocal,4.9,2,0,A,1,625,TACE + Placebo
+171,Male,51.101985,7,1,1,1,0,NA,NA,13,40,Multifocal,6.8,2.8,0,A,0,186,TACE + Sorafenib
+172,Male,77.117043,1182,1,0,0,0,NA,NA,8,38,Multifocal,7.6,1.7,0,A,1,942,TACE + Placebo
+173,Female,75.362081,18,1,0,0,0,NA,NA,28,34,Multifocal,4,NA,0,A,1,704,TACE + Placebo
+174,Male,67.403149,94,1,0,0,1,1,History,21,NA,Multifocal,4.4,5.5,0,A,1,288,TACE + Sorafenib
+175,Male,56.804928,17,1,0,0,0,NA,NA,11,NA,Multifocal,3.3,1.5,0,A,1,344,TACE + Sorafenib
+176,Male,59.195072,4,1,1,0,0,NA,NA,17,42,Unifocal,8,2.9,0,A,0,505,TACE + Placebo
+177,Male,61.314168,5,1,0,0,0,NA,NA,10,46,Unifocal,6,NA,0,A,0,600,TACE + Placebo
+178,Male,72.208077,15,1,0,0,0,NA,NA,54,35,Multifocal,2.8,2.4,0,A,1,193,TACE + Sorafenib
+179,Male,57.232033,66,1,0,1,0,NA,NA,7,36,Multifocal,5,2.4,0,A,1,927,TACE + Sorafenib
+180,Male,67.819302,681,0,0,0,0,NA,NA,32,35,Multifocal,4.4,NA,0,A,0,1166,TACE + Sorafenib
+181,Male,76.958248,3.2,0,NA,NA,NA,NA,NA,11,46,Multifocal,3,1.6,0,A,1,554,TACE + Placebo
+182,Male,67.764545,23,1,0,0,0,NA,NA,16,36,Unifocal,16,NA,0,A,0,1107,TACE + Sorafenib
+183,Male,64.240931,1604,0,NA,NA,NA,NA,NA,10,43,Unifocal,6.7,NA,0,A,1,707,TACE + Placebo
+184,Male,69.535934,4,1,0,0,1,NA,NA,11,34,Unifocal,3.6,NA,0,A,0,1097,TACE + Placebo
+185,Female,79.074606,594,0,NA,NA,NA,NA,NA,16,38,Multifocal,5.5,2.3,0,A,1,426,TACE + Placebo
+186,Male,57.960301,980,1,0,0,0,NA,NA,11,42,Unifocal,7.7,NA,0,A,0,978,TACE + Sorafenib
+187,Female,76.637919,223,1,0,0,0,NA,NA,23,42,Unifocal,5.4,NA,0,A,0,415,TACE + Placebo
+188,Female,65.612594,4,1,0,0,0,1,Patient said no,11,33,Multifocal,1.5,1.5,0,A,0,874,TACE + Sorafenib
+189,Male,64.257358,2,1,0,0,1,1,verbal history,6,45,Unifocal,9.8,NA,0,A,1,299,TACE + Placebo
+190,Male,63.170431,587,1,0,1,0,NA,NA,20,33,Multifocal,4.1,2.5,0,A,0,140,TACE + Placebo
+191,Male,68.262834,2,1,0,0,1,1,History ,14,46,Unifocal,8.6,NA,0,A,0,912,TACE + Sorafenib
+192,Female,77.984942,25,1,0,0,0,NA,NA,12,40,Multifocal,3.5,2.3,0,A,0,938,TACE + Sorafenib
+193,Male,78.945927,2,1,0,0,1,1,clinic letter,10,41,Multifocal,12,1.8,0,A,0,476,TACE + Placebo
+194,Male,59.728953,395,0,NA,NA,NA,NA,NA,12,39,Unifocal,2.3,NA,0,A,1,606,TACE + Placebo
+195,Female,55.986311,2,0,NA,NA,NA,NA,NA,7,33,Multifocal,4,2.1,0,A,1,631,TACE + Sorafenib
+196,Male,49.538672,36601,1,0,1,0,NA,NA,22,41,Multifocal,8.1,5,0,A,1,101,TACE + Sorafenib
+197,Male,68.142368,26,1,0,0,1,1,History ,18,42,NA,NA,NA,0,A,0,1,TACE + Placebo
+198,Male,61.0705,418.4,1,0,0,1,1,History ,11,46,Multifocal,4.4,3.6,0,A,0,18,TACE + Sorafenib
+199,Male,64.520192,4,1,0,0,0,NA,NA,16,37,Multifocal,5.6,1.6,0,A,0,38,TACE + Sorafenib
+200,Male,76.350445,154,1,0,0,0,NA,NA,7,43,Multifocal,3,2.1,0,A,0,651,TACE + Placebo
+201,Male,55.731691,2,0,NA,NA,NA,NA,NA,27,45,Unifocal,12,NA,0,A,0,175,TACE + Sorafenib
+202,Male,74.90486,2,0,0,0,0,NA,NA,11,36,Multifocal,2.8,1.7,0,A,0,343,TACE + Placebo
+203,Male,60.265572,344,1,1,1,0,NA,NA,18,33,Multifocal,2.5,NA,0,A,1,40,TACE + Sorafenib
+204,Male,68.829569,2,0,NA,NA,NA,NA,NA,3,42,Multifocal,11.5,4.5,0,A,0,925,TACE + Sorafenib
+205,Male,68.131417,188.6,1,0,0,1,1,History imaging,27,35,Multifocal,4.1,1.6,0,A,1,77,TACE + Placebo
+206,Male,85.212868,40,1,0,0,0,NA,NA,8,44,Unifocal,4.1,NA,0,A,0,798,TACE + Placebo
+207,Male,60.032854,9,1,0,0,0,NA,NA,7,41,Unifocal,13,NA,0,A,1,264,TACE + Sorafenib
+208,Male,55.485284,64.7,1,0,0,1,1,History,7,29,Multifocal,3.5,1.4,0,A,0,462,TACE + Sorafenib
+209,Male,72.974675,2,0,NA,NA,NA,NA,NA,4,36,Multifocal,15.2,2.2,0,A,1,916,TACE + Placebo
+210,Female,68.013689,887,1,0,0,0,1,History,12,43,Unifocal,6.1,NA,0,A,0,579,TACE + Sorafenib
+211,Male,60.80219,6,1,1,1,1,1,Patient admission,4,39,Multifocal,6.1,4.4,0,A,0,315,TACE + Placebo
+212,Male,82.680356,3,1,0,0,0,1,From patient,7,42,Unifocal,6,NA,0,A,0,106,TACE + Sorafenib
+213,Male,53.670089,228,1,0,0,1,1,Self report,26,28,Unifocal,6.9,NA,0,A,1,19,TACE + Sorafenib
+214,Male,70.902122,10,1,1,1,0,NA,NA,7,34,Multifocal,4.7,3,0,A,0,371,TACE + Placebo
+215,Female,60.594114,481,1,0,0,1,1,history,30,35,Multifocal,4,2,0,A,1,194,TACE + Placebo
+216,Female,83.5154,44,1,0,0,0,NA,NA,11,40,Multifocal,7.4,2.6,0,A,1,331,TACE + Sorafenib
+217,Male,58.507871,93,1,1,0,1,1,patient admission,35,31,Multifocal,NA,NA,0,A,1,358,TACE + Sorafenib
+218,Male,77.919233,3,1,0,0,1,1,History ,21,44,Multifocal,3.7,3.2,0,A,0,770,TACE + Placebo
+219,Male,67.917864,12,1,0,0,1,1,HISTORY,20,38,Multifocal,3.4,NA,0,A,1,536,TACE + Placebo
+220,Male,78.442163,1.72,1,0,0,0,NA,NA,47,40,Unifocal,3.3,NA,0,A,1,200,TACE + Sorafenib
+221,Male,69.722108,112,0,1,0,0,NA,NA,19,42,Multifocal,18.8,4.8,0,A,0,21,TACE + Placebo
+222,Male,64.550308,16,1,0,0,0,NA,NA,20,34,Multifocal,5.1,1.7,0,A,0,784,TACE + Placebo
+223,Male,65.166324,13424,1,0,0,0,NA,NA,35,38,Multifocal,7,NA,0,A,1,254,TACE + Placebo
+224,Male,58.554415,2.08,1,0,0,0,NA,NA,11,44,Multifocal,7.9,2.8,0,A,0,572,TACE + Placebo
+225,Female,80.221766,284,1,0,0,0,NA,NA,8,45,Unifocal,3.5,NA,0,A,0,360,TACE + Sorafenib
+226,Male,52.490075,16,1,0,0,1,1,Patient,25,33,Multifocal,2.1,4.7,0,A,1,551,TACE + Sorafenib
+227,Male,69.399042,2,1,0,0,1,1,Patient admission,16,41,Unifocal,3.5,2.1,0,A,0,125,TACE + Sorafenib
+228,Male,65.831622,45,1,0,0,1,NA,NA,23,40,Multifocal,2.8,2.4,0,A,1,379,TACE + Placebo
+229,Male,63.216975,12,1,0,0,0,NA,NA,7,35,Multifocal,1.5,1.3,0,A,1,844,TACE + Placebo
+230,Male,53.921971,4,1,0,1,0,NA,NA,8,41,Multifocal,6.4,3.6,0,A,0,798,TACE + Sorafenib
+231,Male,46.223135,5,1,1,1,1,1,abstinent for 12 months patient admission,12,50,Multifocal,2.3,2.6,0,A,0,238,TACE + Sorafenib
+232,Female,67.906913,2.41,1,1,0,0,NA,NA,7,39,Multifocal,8,NA,0,A,1,435,TACE + Placebo
+233,Male,78.38193,1612,1,0,0,0,NA,NA,17,34,Multifocal,20.3,NA,0,A,0,730,TACE + Sorafenib
+234,Male,76.895277,9.5,1,0,0,1,1,History,23,37,Unifocal,7.1,NA,0,A,1,473,TACE + Sorafenib
+235,Female,65.199179,33,1,0,1,0,NA,NA,14,36,Multifocal,6.2,2.7,0,A,0,670,TACE + Placebo
+236,Male,49.519507,1017,1,0,1,1,1,Patient history,9,35,Multifocal,3.3,3.7,0,A,1,279,TACE + Placebo
+237,Male,61.659138,6,1,0,0,0,NA,NA,11,47,Multifocal,10.6,NA,0,A,0,686,TACE + Sorafenib
+238,Female,69.215606,17,1,0,0,1,1,20 year history,8,36,Multifocal,2.4,3.5,0,A,1,234,TACE + Placebo
+239,Male,64.142368,6.5,1,0,1,0,NA,NA,7,44,Unifocal,1.8,NA,0,A,0,835,TACE + Placebo
+240,Male,75.104723,180,1,0,0,1,1,History ,22,40,Multifocal,1.9,1.2,0,A,1,203,TACE + Sorafenib
+241,Male,64.334018,386,1,0,0,1,NA,NA,35,36,Multifocal,4.4,1.5,0,A,0,739,TACE + Sorafenib
+242,Male,77.620808,1051,1,0,0,0,1,Pt History,27,35,Multifocal,15.6,3.1,0,A,1,37,TACE + Placebo
+243,Female,72.095825,7,1,0,0,0,NA,NA,20,45,Multifocal,6,1.9,0,A,0,147,TACE + Placebo
+244,Male,63.033539,676,1,0,0,1,1,Patient,30,28,Multifocal,5.4,4.5,0,A,1,86,TACE + Placebo
+245,Male,64.750171,28,1,0,0,1,1,Patient History,28,31,Multifocal,4,2,0,A,0,640,TACE + Sorafenib
+246,Male,55.997262,733,1,1,0,0,NA,NA,11,37,Multifocal,5.5,2.8,0,A,0,630,TACE + Sorafenib
+247,Male,76.873374,39,1,0,0,0,1,History ,10,42,Multifocal,11.5,NA,0,A,1,83,TACE + Placebo
+248,Male,69.045859,22,1,0,0,1,1,significant history of alcohol excess,10,39,Unifocal,4.5,NA,0,A,0,645,TACE + Placebo
+249,Male,70.42026,12,1,0,0,1,NA,NA,12,39,Multifocal,2.2,2,0,A,0,562,TACE + Sorafenib
+250,Male,63.036277,721,1,1,0,0,NA,NA,24,34,Multifocal,4.1,3,0,A,0,215,TACE + Sorafenib
+251,Male,71.474333,539,1,0,0,0,NA,NA,9,47,Unifocal,10.4,NA,0,A,0,537,TACE + Placebo
+252,Male,57.546886,3,1,1,1,1,1,Patient admission,4,46,Multifocal,2.7,2,0,A,0,581,TACE + Sorafenib
+253,Male,64.268309,4,1,0,0,1,1,10-12 pints per day,19,37,Unifocal,1.5,NA,0,A,0,460,TACE + Sorafenib
+254,Male,66.956879,1958,1,0,1,1,1,history,23,33,Multifocal,2.3,NA,0,A,1,44,TACE + Sorafenib
+255,Male,68.224504,398,1,0,0,0,1,Patient History,15,30,Multifocal,3.6,1.2,0,A,1,259,TACE + Sorafenib
+256,Male,65.415469,618,1,0,0,1,1,patient admission,16,43,Multifocal,6.5,2,0,A,1,207,TACE + Sorafenib
+257,Male,73.908282,2,0,NA,NA,NA,NA,NA,14,43,Multifocal,2.5,1.8,0,A,0,224,TACE + Placebo
+258,Male,76.238193,3,0,NA,NA,NA,NA,NA,12,46,Multifocal,3.6,2.3,0,A,0,574,TACE + Placebo
+259,Male,67.937029,4,0,NA,NA,NA,NA,NA,14,37,Multifocal,9.6,8,0,A,1,274,TACE + Sorafenib
+260,Male,62.548939,93,1,0,0,0,NA,NA,22,41,Multifocal,3.1,2.1,0,A,1,212,TACE + Placebo
+261,Male,76.77755,3,0,NA,NA,NA,NA,NA,7,46,Unifocal,2.1,2,0,A,1,199,TACE + Placebo
+262,Male,68.520192,5,1,0,0,0,NA,NA,24,38,Unifocal,8.4,NA,0,A,1,338,TACE + Sorafenib
+263,Male,74.354552,996,1,1,1,0,NA,NA,7,41,Multifocal,3,2.6,0,A,1,510,TACE + Placebo
+264,Male,58.746064,2055,0,NA,NA,NA,NA,NA,15,34,Multifocal,11.9,NA,0,A,1,179,TACE + Placebo
+265,Male,70.491444,5,0,NA,NA,NA,NA,NA,6,41,Multifocal,6.2,3,0,A,0,406,TACE + Sorafenib
+266,Male,78.220397,1,0,NA,NA,NA,NA,NA,5,40,Unifocal,4.6,NA,0,A,0,495,TACE + Placebo
+267,Male,77.119781,1,1,0,0,1,1,Pt History,26,29,Unifocal,4.8,NA,0,A,0,615,TACE + Placebo
+268,Male,60.424367,355,0,NA,NA,NA,NA,NA,12,45,Multifocal,2,2,0,A,1,371,TACE + Sorafenib
+269,Female,71.644079,3,1,0,0,0,NA,NA,8,39,Unifocal,1.7,NA,0,A,0,620,TACE + Sorafenib
+270,Male,57.229295,131,1,0,0,0,NA,NA,14,41,Unifocal,7.6,NA,0,A,0,490,TACE + Placebo
+271,Male,58.453114,1,1,0,0,1,1,Clinical History ,4,40,Multifocal,6.5,4.9,0,A,1,336,TACE + Sorafenib
+272,Male,58.469541,31,1,0,1,0,NA,NA,11,43,Unifocal,6.5,1.8,0,A,0,124,TACE + Placebo
+273,Male,61.900068,779,1,0,0,0,1,Medical History,10,42,Multifocal,3.3,2.6,0,A,1,337,TACE + Placebo
+274,Male,67.225188,10,1,0,0,1,1,Medical History ,16,39,Multifocal,6.3,4.2,0,A,0,536,TACE + Sorafenib
+275,Female,76.717317,13,1,0,0,0,1,Patient History ,13,37,Unifocal,5.3,NA,0,A,0,539,TACE + Placebo
+276,Female,80.416153,611,1,0,0,0,NA,NA,9,40,Unifocal,6.9,NA,0,A,1,288,TACE + Sorafenib
+277,Male,79.545517,3,0,NA,NA,NA,NA,NA,8,43,Multifocal,2.6,1.2,0,A,0,406,TACE + Sorafenib
+278,Male,77.390828,16520,0,NA,NA,NA,NA,NA,6,40,Multifocal,5.8,1.2,0,A,0,406,TACE + Sorafenib
+279,Male,54.984257,6,1,1,1,0,NA,NA,18,43,Multifocal,8.5,5.1,0,A,0,490,TACE + Sorafenib
+280,Male,67.816564,80,1,0,0,1,NA,NA,16,43,Multifocal,2.8,4.2,0,A,0,407,TACE + Placebo
+281,Male,77.587953,7,0,0,0,0,NA,NA,7,45,Multifocal,10,NA,0,A,1,183,TACE + Placebo
+282,Male,71.455168,11.4,1,0,0,0,NA,NA,19,43,Multifocal,1.4,1.4,0,A,0,431,TACE + Placebo
+283,Male,55.904175,46.8,1,0,1,0,NA,NA,14,40,Multifocal,5.1,6,0,A,0,210,TACE + Sorafenib
+284,Male,63.63039,99999.99,1,1,0,0,NA,NA,23,47,Unifocal,10.7,NA,0,A,0,77,TACE + Placebo
+285,Male,69.598905,13823,1,1,0,1,1,History,10,44,Multifocal,7.1,3,0,A,1,531,TACE + Placebo
+286,Male,80.136893,5,1,0,0,1,1,ALD,25,40,Multifocal,3.5,2.8,0,A,0,504,TACE + Sorafenib
+287,Male,75.049966,15,1,0,0,1,1,Assumed. Not confirmed by testing.,14,38,Multifocal,6.8,NA,0,A,1,356,TACE + Placebo
+288,Male,35.238877,5778,1,1,0,0,NA,NA,11,45,Multifocal,6.2,6,0,A,0,16,TACE + Sorafenib
+289,Male,66.3436,3,1,0,0,0,NA,NA,18,41,Unifocal,5.3,NA,0,A,0,410,TACE + Placebo
+290,Male,55.296372,34.78,1,0,1,1,NA,NA,20,35,Multifocal,2.8,2,0,A,0,445,TACE + Sorafenib
+291,Male,74.746064,2,1,0,0,1,1,Haemochromatosis,9,45,Multifocal,1.8,5.7,0,A,0,445,TACE + Placebo
+292,Male,79.244353,38,1,0,0,1,1,Patient admission,15,35,Unifocal,15.4,NA,0,A,0,33,TACE + Sorafenib
+293,Male,70.310746,32,1,0,0,1,1,history of excessive alcohol excess,16,43,Unifocal,5.4,NA,0,A,0,421,TACE + Sorafenib
+294,Male,62.483231,32,1,0,0,1,1,Patient History ,20,38,Multifocal,2.5,NA,0,A,0,494,TACE + Placebo
+295,Male,65.319644,2,0,NA,NA,NA,NA,NA,10,47,NA,8.9,3,0,A,0,378,TACE + Placebo
+296,Male,63.074606,4,1,0,0,0,NA,NA,28,39,Multifocal,6.4,5.2,0,A,0,344,TACE + Sorafenib
+297,Male,51.063655,899,0,NA,NA,NA,NA,NA,20,36,Multifocal,9,NA,0,A,0,9,TACE + Sorafenib
+298,Male,68.755647,2,1,0,0,1,NA,NA,7,NA,Multifocal,1.3,1.6,0,A,0,163,TACE + Placebo
+299,Male,61.856263,16,1,0,1,0,1,Patient History ,31,38,Multifocal,7.7,2.1,0,A,0,437,TACE + Sorafenib
+300,Male,64.391513,802,1,0,0,1,1,History ,23,44,Multifocal,4.7,3.9,0,A,0,147,TACE + Placebo
+301,Male,62.160164,10953,1,1,1,1,1,previous binge drinker,23,36,Unifocal,7.2,1.9,0,A,0,291,TACE + Sorafenib
+302,Male,56.457221,3,0,0,1,0,NA,NA,9,NA,Multifocal,23,NA,0,A,0,137,TACE + Placebo
+303,Male,77.377139,122,1,0,0,1,1,medical history,14,43,Unifocal,5,NA,0,A,0,281,TACE + Sorafenib
+304,Male,45.801506,520,0,0,0,0,1,Pt History ,8,36,Multifocal,23,NA,0,A,0,366,TACE + Placebo
+305,Male,53.544148,45.6,1,0,1,0,NA,NA,49,33,Unifocal,5.7,NA,0,A,0,183,TACE + Sorafenib
+306,Male,60.087611,10,0,NA,NA,NA,NA,NA,12,42,Multifocal,3.3,3.4,0,A,0,257,TACE + Placebo
+307,Male,67.389459,17,1,0,0,1,1,MEDICAL HISTORY,20,38,Unifocal,6.2,NA,0,A,0,329,TACE + Placebo
+308,Male,77.683778,1,1,0,0,0,1,Patient History,9,30,Unifocal,3.4,NA,0,A,0,108,TACE + Sorafenib
+309,Male,65.648186,267,1,0,0,1,1,medical history,20,37,Unifocal,6.5,NA,0,A,0,315,TACE + Sorafenib
+310,Male,72.325804,4,1,0,0,0,NA,NA,29,32,Unifocal,3.5,NA,0,A,1,299,TACE + Placebo
+311,Male,77.661875,4,1,0,0,0,NA,NA,17,42,Unifocal,5,NA,0,A,0,245,TACE + Sorafenib
+312,Male,66.762491,38,1,0,0,0,NA,NA,16,39,Multifocal,6,2.5,0,A,0,308,TACE + Placebo
+313,Male,55.518138,17,1,0,0,1,1,Patient History,15,32,Unifocal,8.3,NA,0,A,0,327,TACE + Sorafenib
