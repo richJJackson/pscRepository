@@ -14,6 +14,13 @@ source("M:/University/R shiny_richard/Richrd_we page/functions.R")
 #source("M:/University/Project/TACE_SIRT1/functions/numVis.R")
 #source("M:/University/Project/TACE_SIRT1/functions/numVisComp.R")
 
+#### ASWATHY - this is just what i use to load the functions (you can ignore this)
+setwd("/Users/richardjackson/Documents/GitHub/pscVis/pscVis")
+devtools::load_all()
+setwd("/Users/richardjackson/Documents/GitHub/psc")
+devtools::load_all()
+
+
 ## loading functions
 library(readxl)
 library(dplyr)
@@ -47,6 +54,7 @@ names(tace_data)[18]<-"cen"
 names(tace_data)[19]<-"time"
 names(tace_data)[20]<-"treatment"
 
+tace_data[1:3,]
 tace_data$Age<-round(tace_data$Age)
 tace_data$time<-tace_data$time/30.44
 
@@ -63,7 +71,6 @@ names(sirt_data)[6]<-"cen"
 names(sirt_data)[9]<-"Albumin"
 names(sirt_data)[11]<-"Bilirubin"
 names(sirt_data)[14]<-"Lesion1"
-
 
 # Convert "Yes" to 1 and "No" to 0 in the Cirrhosis column
 sirt_data$Cirrhosis <- ifelse(sirt_data$Cirrhosis == "yes", 1, 0)
@@ -128,13 +135,12 @@ tace_summary <- tace_data3%>%
 summary_table <- bind_rows(sirt_summary, tace_summary)
 
 
-##2. Kaplam-Meier plots for tace data
 
+##2. Kaplam-Meier plots for tace data
 km1 <- survfit(Surv(time, cen) ~ 1, data = tace_data3)
 km1
 
 # Plot the Kaplan-Meier curve with ggsurvplot
-
 plot(km1, 
   xlab = "Time (months)", 
   ylab = "Survival Probability", 
@@ -287,18 +293,26 @@ print(plot1)
 
 
 
+### Visualisation tools to look at the dataset
+cfm.vis <- cfmDataVis(flexspline_model1)
+ggarrange(cfm.vis[[1]],cfm.vis[[2]],cfm.vis[[3]],cfm.vis[[4]])
+
 
 
 
 
 ### TACE model
 #####  backward selection method
+tace_data3[1:3,]
 
 cox_full<-coxph(Surv(time,cen)~Gender+Age+AFP+Cirrhosis+Bilirubin+Albumin+Focality+Lesion1,data=tace_data3)
 summary(cox_full)
 
 backward_model<-step(cox_full, direction="backward")
 summary(backward_model)
+
+
+
 
 # Forward selection
 #  fit a null model
@@ -309,8 +323,6 @@ forward_model <- step(null_model, direction = "forward", scope = formula(cox_ful
 summary(forward_model)
 
 tace_data3 <- tace_data3[tace_data3$time > 0, ]
-
-
 
 flexspline_model1 <- flexsurvspline(Surv(time, cen) ~ AFP+Cirrhosis+Albumin+Lesion1, data = tace_data3,k=1)  
 flexspline_model1
@@ -325,28 +337,60 @@ flexspline_model2
 flexspline_model21 <- flexsurvspline(Surv(time, cen) ~ AFP+Cirrhosis+Albumin+Focality+Lesion1, data = tace_data3,k=2)  
 flexspline_model21
 
-
-flexspline_model5 <- flexsurvspline(Surv(stime, dead) ~ AFP+Cirrhosis+Albumin+Lesion1, data = tace_data3,k=5)  
+flexspline_model5 <- flexsurvspline(Surv(time, cen) ~ AFP+Cirrhosis+Albumin+Lesion1, data = tace_data3,k=5)  
 flexspline_model5
 
 
-flexspline_model6 <- flexsurvspline(Surv(stime, dead) ~ AFP+Cirrhosis+Albumin+Focality, data = tace_data3,k=6)  
+flexspline_model6 <- flexsurvspline(Surv(time, cen) ~ AFP+Cirrhosis+Albumin+Focality, data = tace_data3,k=1)  
 flexspline_model6
+
+
+### Visualisation tools to look at the dataset
+cfm.vis <- cfmDataVis(flexspline_model1)
+ggarrange(cfm.vis[[1]],cfm.vis[[2]],cfm.vis[[3]],cfm.vis[[4]])
+
+### AFP may work better on the log scale...
+tace_data3$AFP <- log(tace_data3$AFP+1)
+### Make sure that Cirrhosis is a factor
+tace_data3$Cirrhosis <- as.factor(tace_data3$Cirrhosis)
+
+
+### TACE model
+#####  backward selection method
+tace_data3[1:3,]
+
+cox_full<-coxph(Surv(time,cen)~Gender+Age+AFP+Cirrhosis+Bilirubin+Albumin+Lesion1,data=tace_data3)
+summary(cox_full)
+
+backward_model<-step(cox_full, direction="backward")
+summary(backward_model)
+
+
+flexspline_model1 <- flexsurvspline(Surv(time, cen) ~ AFP+Cirrhosis+Albumin+Lesion1, data = tace_data3,k=1)  
+flexspline_model1
+
+
+### Visualisation tools to look at the dataset
+library(waffle)
+cfm.vis <- cfmDataVis(flexspline_model1)
+ggarrange(cfm.vis[[1]],cfm.vis[[2]],cfm.vis[[3]],cfm.vis[[4]])
+
+
+
 
 validation1<-cfmValid.flexsurvreg(flexspline_model1)
 validation1
 
+
 setting1<-cfmSett(flexspline_model1)
 setting1
 
+flexspline_model1
+flexspline_model6
 
-
-validation2<-cfmValid.flexsurvreg(cfm=flexspline_model1,exData=sirt_data1)
-validation2
-
-validation3<-cfmValid.flexsurvreg(flexspline_model1,exData=tace_data13)
-validation3
-
+### Setting working directory for saving models
+### Please note I've added flexspline_model6 as I think this included the terms from the stepwise procedure
+setwd("~/Documents/GitHub/pscLibrary/TACE_SIRT/Data")
 save(flexspline_model1, file="1knotmodel.Rdata")
 
 load("1knotmodel.RData")
@@ -355,25 +399,45 @@ load("1knotmodel.RData")
 ### Create on the TACE data using appropriate methodology (stepwise???) to the TACE 2 data
 ## Once the model has been created using stepwise regression, it can be applied to the TACE 2 dataset(i guess it is Placebo + Sorafenib).
 
-tace_data11<-filter(tace_data,treatment=="TACE + Sorafenib")
+tace_data11[1:3,]
+tace_data$treatment
+
+library(tidyr)
+tace_data11<-filter(tace_data,tace_data$treatment=="TACE + Sorafenib")
+tace_data11 <- tace_data[which(tace_data$treatment=="TACE + Sorafenib"),]
 
 tace_data12<-tace_data11[,which(names(tace_data11)%in%c("Patient.TNO","Gender","Age","AFP","Cirrhosis",
 "Bilirubin","Albumin","Focality","Lesion1","Vascular.invasion","Child.Pugh.grade","cen","time","treatment"))]
 
 tace_data13<-na.omit(tace_data12)
 
+### need to take logs in AFP again
+tace_data13$AFP <- log(tace_data13$AFP+1)
+
 ##comapre with treatment=="TACE + Sorafenib" within Tace dataset using pscfit
+
+### Before fitting a pscfit model we can make sure the data match...
+visComp <- cfmDataComp(flexspline_model1,tace_data13)
+ggarrange(visComp[[1]],visComp[[2]],visComp[[3]],visComp[[4]])
+
+
 psc_tace2<-pscfit(flexspline_model1,tace_data13)
 summary(psc_tace2)
-plot(psc_tace2)
+p <- plot(psc_tace2)
 plot_ite(psc_tace2)
+
+### We can check if the new fit looks reasonable (notice beta=-0.24)
+s2 <- surv_fpm(psc_tace2$DC_clean,beta=-0.245)
+s_data <- data.frame("time"=s2$time,"S"=s2$S)
+p+ geom_line(data=s_data, aes(time,S),col=4,lwd=1.5)
+
 
 
 ##comapre with treatment=="TACE + Placebo" within Tace dataset using pscfit (the data used for the model itself)
-psc_tace1<-pscfit(flexspline_model1,tace_data1)
-summary(psc_tace1)
-plot(psc_tace1)
-plot_ite(psc_tace1)
+#psc_tace1<-pscfit(flexspline_model1,tace_data1)
+#summary(psc_tace1)
+#plot(psc_tace1)
+#plot_ite(psc_tace1)
 
 #### Validate using bootstrapping
 
@@ -382,14 +446,76 @@ plot_ite(psc_tace1)
 ###PSC comparison
 ##Compare SIRT data to TACE model for overall comparison
 sirt_data1<-sirt_data[,which(names(sirt_data)%in%c("CUN_ID","Gender","cen","AFP","Albumin","Bilirubin","Cirrhosis","Lesion1","time","Age"))]
+
+#### I think the lesion sizes are measured on different scales...
+sirt_data1$Lesion1 <- sirt_data1$Lesion1/10
+sirt_data1$Cirrhosis <- factor(sirt_data1$Cirrhosis)
+sirt_data1$AFP <- log(sirt_data1$AFP+1)
+
+visComp_sirt <- cfmDataComp(flexspline_model1,sirt_data1)
+ggarrange(visComp_sirt[[1]],visComp_sirt[[2]],visComp_sirt[[3]],visComp_sirt[[4]])
+
+
 psc2<-pscfit(flexspline_model1,sirt_data1)
 summary(psc2)
+plot(psc2)
+summary(psc2)
 
+### We can check if the new fit looks reasonable (notice beta=-0.915)
+s2 <- surv_fpm(psc2$DC_clean,beta=-0.915)
+s_data <- data.frame("time"=s2$time,"S"=s2$S)
+p <- plot(psc2)
+p+ geom_line(data=s_data, aes(time,S),col=4,lwd=1.5)
+
+### Not a great fit - likely there is some sort of delayed effect (np hazards)
+
+exp(-0.91)
+
+### Try some sub-group analysis
+
+sirt_data[1:3,]
+id <- which(sirt_data1$Albumin<37.5)
+psc2_sg1<-pscfit(flexspline_model1,sirt_data1,id=id)
+summary(psc2_sg1)
+plot(psc2_sg1)
+
+
+id <- which(sirt_data1$Albumin>37.5)
+psc2_sg2<-pscfit(flexspline_model1,sirt_data1,id=id)
+summary(psc2_sg2)
+plot(psc2_sg2)
+
+
+
+
+p <- cfmVis[[i]]
+x <- x
+
+numVisComp <- function(p,x){
+  dnew <- data.frame("xnew"=x);dnew
+  names(dnew) = "xnew"
+  p + geom_density(aes(x=xnew,y=..density..),data=dnew, fill="#404080",color="#404080" )
+}
+
+dnew
+
+ggarrange(cfm.vis[[1]],cfm.vis[[2]],cfm.vis[[3]],cfm.vis[[4]])
+
+
+library(RColorBrewer)
+
+
+flexspline_model1
+sirt_data1[1:3,]
+tace_data1[1:3,]
+
+flexspline_model1
 str(psc2)
 psc2$model.type
 
 plot(psc2)
 plot_ite(psc2)
+
 #plot_ite(flexspline_model1)
 
 
