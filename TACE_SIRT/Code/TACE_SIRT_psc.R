@@ -487,35 +487,6 @@ plot(psc2_sg2)
 
 
 
-
-p <- cfmVis[[i]]
-x <- x
-
-numVisComp <- function(p,x){
-  dnew <- data.frame("xnew"=x);dnew
-  names(dnew) = "xnew"
-  p + geom_density(aes(x=xnew,y=..density..),data=dnew, fill="#404080",color="#404080" )
-}
-
-dnew
-
-ggarrange(cfm.vis[[1]],cfm.vis[[2]],cfm.vis[[3]],cfm.vis[[4]])
-
-
-library(RColorBrewer)
-
-
-flexspline_model1
-sirt_data1[1:3,]
-tace_data1[1:3,]
-
-flexspline_model1
-str(psc2)
-psc2$model.type
-
-plot(psc2)
-plot_ite(psc2)
-
 #plot_ite(flexspline_model1)
 
 
