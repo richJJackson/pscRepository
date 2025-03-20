@@ -23,7 +23,8 @@ e4 <- read.csv("e4_data_cohort.csv")
 
 
 
-
+out <- data.frame(fpm$data$Y)
+survfit(Surv(out$time,out$status)~1)
 
 ###################################################################
 ###### Summarizing FPM model
@@ -73,8 +74,6 @@ dev.off()
 
 val <- cfmValid.flexsurvreg(fpm)
 
-attributes(val)
-surv_fpm(fpm)
 
 png("e3_gem_discr.png", width=600, height=600, bg = "transparent"); 
 plot(val$discrim$sfit,col=c(4,5,6,"darkorchid"),lwd=4,xlim=c(0,60),lwd.obs=3,col.obs="darkorchid",cex.axis=1.4,
@@ -84,10 +83,45 @@ legend(40,0.9,c("Risk Group 1","Risk Group 2","Risk Group 3","Risk Group 4"),col
 dev.off()
 
 
+co <- summary(val$discrim$cm)$coefficients
+lo <- co[,1]-1.96*co[,3]
+up <- co[,1]+1.96*co[,3]
+
+est <- round(co[,1],3)
+hr <- round(exp(est),3)
+se <- round(co[,3],3)
+lo <- round(exp(lo),3)
+up <- round(exp(up),3)
+
+
+r1 <- paste(est," (",se,")",sep="")
+r2 <- paste(hr," (",lo,", ",up,")",sep="")
+
+tb <- rbind("",cbind(r1,r2))
+rownames(tb) <- c("Risk Group 1","Risk Group 2","Risk Group 3","Risk Group 4")
+colnames(tb) <- c("est (se)","HR (95% CI)")
+
+kable(tb,format="html")
 
 
 
-cfmValid.flvalcfmValid.flexsurvreg <- function(cfm,exData=NULL){
+calib_c <- round(val$calib$c,3)
+calib_slope <- round(summary(val$calib$slope)$coefficients,3)
+
+
+calib_c <- paste(calib_c[1]," (",calib_c[2],")",sep="")
+calib_slope <- paste(calib_slope[1]," (",calib_slope[3],")",sep="")
+
+tb2 <- rbind(calib_c,calib_slope)
+rownames(tb2) <- c("C-Statistic","Slope")
+colnames(tb2) <- "est (se)"
+kable(tb2,format="html")
+
+
+
+attributes(val)
+
+cfmValid.flexsurvreg <- function(cfm,exData=NULL){
   
   ret <- list()
   ret$detail <- list
