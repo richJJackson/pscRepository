@@ -15,23 +15,22 @@ library(table1)
 setwd("/Users/richardjackson/Documents/GitHub/toolsRJJ")
 devtools::load_all()
 
+
 ### Getting Model and data
 setwd("~/Documents/GitHub/pscLibrary/PDAC/GemVsGemCap")
 load("flexParaGem.R")
 
 e4 <- read.csv("e4_data_cohort.csv")
 
-
-
 out <- data.frame(fpm$data$Y)
 survfit(Surv(out$time,out$status)~1)
+
 
 ###################################################################
 ###### Summarizing FPM model
 
 fpm.res <- fpm$res
 fpm.eres <- exp(fpm.res)
-
 
 ### Summarising data
 names(fpm$data$m)[2:5] <- c("T Stage","Tumor Grade","Lymph Node","(log) CA19.9")
