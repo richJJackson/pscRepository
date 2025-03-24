@@ -182,6 +182,8 @@ cfmValid.flexsurvreg <- function(cfm,exData=NULL){
 espac4$stime <- as.numeric(as.Date(espac4$cens_date2,"%d%b%Y") - as.Date(espac4$rand_date_chk,"%m/%d/%Y"))/30.44
 espac4$s.ob <- Surv(espac4$stime,espac4$event)
 
+espac4 <- e4
+
 ## Cleaning ESPAC4 data
 espac4$nodes <- cut(espac4$AJCC8Nstage,c(-0.5,1.5,2.5),labels=c(1,2))
 espac4$grade <- cut(espac4$differentiation,c(-.5,.5,2.5,4.5),labels=c(1,2,3))
@@ -194,9 +196,12 @@ espac4$t[which(espac4$t%in%c("T3"))] <- 4
 espac4$t <- factor(espac4$t,levels=c("2","3","4"))
 espac4$lca199 <- log(espac4$ca199_post+1)
 
-e4 <- espac4[,which(names(espac4)%in%c("stime","event","nodes","grade","t","lca199"))]
-names(e4) <- c("cen","grade","time","nodes","lca199","t")
+espac4[1:3,]
 
+e4 <- espac4[,which(names(espac4)%in%c("stime","event","nodes","grade","t","lca199"))]
+names(e4) <- c("cen","time","nodes","grade","lca199","t")
+
+write.csv(e4,"e4.csv")
 e4gem <- e4[which(espac4$rand_arm_chk==1),]
 e4gcap <- e4[which(espac4$rand_arm_chk==2),]
 

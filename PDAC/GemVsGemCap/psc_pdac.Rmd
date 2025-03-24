@@ -7,6 +7,19 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+library(psc)
+setwd("/Users/richardjackson/Documents/GitHub/pscVis/pscVis")
+devtools::load_all()
+setwd("/Users/richardjackson/Documents/GitHub/psc")
+devtools::load_all()
+library(knitr)
+library(RColorBrewer)
+library(ggplot2)
+library(waffle)
+library(ggpubr)
+
+
 ```
 
 
@@ -83,7 +96,7 @@ available at (https://github.com/richJJackson/pscLibrary/tree/main/PDAC/GemVsGem
 Data are available in .csv format:
 
 ```{r}
-e4 <- read.csv("e4_data_cohort.csv")
+e4 <- read.csv("e4_data_cohort.csv") 
 head(e4)
 ```
 
@@ -96,22 +109,57 @@ each covariate in the model, there exists an equivalent covariate in the dataset
 Care should be applied to ensure that these covaraites match, are vectors of the 
 same class and are measured on the same scale.
 
-dataComb
-data_match
+The psc.r package includes a function dataComb.r which is contructued to create 
+a single 'cleaned' object which includes both the model and the dataset.  This includes a data_match.R fucntion which has the specific task of cheking the model and the data for compatibility. Both of these functions are included within the pscfit function for performing personalised synthetic contorls analyses and can also be run seperately.
 
+The PSC methodology works on a complete case dataset and any observations with missing data will be removed.  In this example 53 rows of data are removed and a warning message is provided to detail this.
 
+```{r}
+DC_clean <- dataComb(fpm,e4)
+```
 
+Beyond compatibility it is improtant to chekc that the model and the dataset are applied in the same setting.  Whilst some of this comparsions will be qualitative, a useful check can be to check the distribution of the data cohort match this of the data in the  model.  The 'cfmDataComp' provides this as a grpahical summary and we use ggarrange to colate these into a single plot
 
+```{r}
+visComp <- cfmDataComp(fpm,e4)
+ggarrange(visComp[[1]],visComp[[2]],visComp[[3]],visComp[[4]])
 
+```
 
 THe model itself are is available from the Gih
 
 
 
-## Including Plots
+## pscfit
+
+The main function for perfoming Personalised Synthetic Controls is the pscfit function which requires as a minimum input the counterfactual model and the data cohrot.
+
+NB this will perform the data cleaning routines
 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+pdac_psc <- pscfit(fpm,e4)
 ```
+
+
+### pscfit options
+
+
+```{r}
+summary(pdac_psc)
+```
+
+
+```{r}
+plot(pdac_psc)
+```
+
+
+* plot
+* summary
+* sub group analysis
+* mulitple treatment effects
+
+
+
 
