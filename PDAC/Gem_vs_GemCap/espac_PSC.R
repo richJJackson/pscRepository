@@ -23,14 +23,8 @@ devtools::load_all()
 setwd("~/Documents/GitHub/pscLibrary/PDAC/GemVsGemCap")
 load("flexParaGem.R")
 
-
-
-
-
 e4 <- read.csv("e4_data_cohort.csv")
 
-out <- data.frame(fpm$data$Y)
-survfit(Surv(out$time,out$status)~1)
 
 
 ###################################################################
