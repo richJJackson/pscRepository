@@ -3,6 +3,8 @@
 #### library
 library(psc)
 
+
+rm(list=ls())
 setwd("/Users/richardjackson/Documents/GitHub/psc")
 devtools::load_all()
 library(knitr)
@@ -10,21 +12,111 @@ library(RColorBrewer)
 library(ggplot2)
 library(waffle)
 library(ggpubr)
-
-setwd("/Users/richardjackson/Documents/GitHub/toolsRJJ")
-devtools::load_all()
+library(gtsummary)
 
 
-setwd("/Users/richardjackson/Documents/GitHub/pscVis/pscVis")
-devtools::load_all()
 
-
-### Getting Model and data
-setwd("~/Documents/GitHub/pscLibrary/PDAC/GemVsGemCap")
+### Getting Model
+setwd("~/Documents/GitHub/pscLibrary/PDAC/Gem_model")
 load("flexParaGem.R")
 
 
 
+
+
+pscCFM(fpm)
+
+pscCFM
+
+cfmDataSumm
+
+cfm <- fpm
+
+cfmDataVis(fpm)
+cfmDataSumm(fpm)
+
+
+
+print.quiet_list <- function(x, ...) {
+  cat("A list with names:")
+  print(names(x))
+}
+
+
+
+cfmDataVis
+
+
+cfmDataVis <- function(cfm){
+  
+  ### Getting data from object
+  data <- model.frame(cfm)
+  
+  ### reordering each factor in the dataset - this maintains individual
+  nr <- nrow(data)
+  for(i in 1:ncol(data)){
+    data[,i] <- data[sample(nr,nr,replace=F),i]
+  }
+  
+  ## removing outcome
+  out <- data[,1]
+  data<- data[,-1]
+  
+  ## removing "weights" column
+  w.id <- which(names(data)=="(weights)")
+  if(length(w.id)>0) data <- data[,-w.id]
+  
+  ## Getting classes
+  cls <- lapply(data,class)
+  
+  ## Creating a list of grobs
+  gglist <- list()
+  
+  for(i in 1:ncol(data)){
+    
+    x <- data[,i];x
+    nm <- names(data)[i]
+    if(cls[i]%in%c("factor","character")){
+      gglist[[i]] <- facVis(x,nm)
+    }
+    
+    if(cls[i]%in%c("numeric","integer")){
+      jit.sd <- sd(x)/10
+      x <- x+rnorm(nr,0,jit.sd)
+      gglist[[i]] <- numVis(x,nm)
+    }
+    
+  }
+  
+  names(gglist) <- names(data)
+  class(gglist) <- c("quiet_list",class(gglist))
+  gglist
+}
+
+
+
+cfmDataVis(fpm)
+
+
+
+
+
+
+print.quiet_list <- function(x, ...) {
+  cat("A list with names:")
+  print(names(x))
+  }
+
+print.quiet_gglist
+print.quiet_gtsumm
+
+
+pscCFM(fpm)
+
+
+### Getting Data
+setwd("~/Documents/GitHub/pscLibrary/PDAC/Gem_Vs_GemCap")
+load("flexParaGem.R")
 
 
 e4 <- read.csv("e4_data_cohort.csv")
@@ -350,4 +442,43 @@ exp(quantile(res[thin,10],p=c(0.5,0.025,0.975)))
 
 
 
+
+
+df <- data.frame(
+  x = 1:10,
+  y = 10:1,
+  g = rep(c('a', 'b'), each=5)
+)
+
+df_list <- split(df, df$g)
+
+plot_list <- lapply(df_list, function(d){
+  out <- ggplot(d) +
+    geom_point(aes(x=x, y=y))
+  class(out) <- c("quiet_plot", class(out))
+  out
+})
+
+print.quiet_plot <- function(x, ...) {
+  print("A plot not displayed!")
+}
+
+plot_list
+
+
+
+plot_list <- lapply(df_list, function(d){
+  ggplot(d) +
+    geom_point(aes(x=x, y=y))
+})
+
+
+plot_list
+
+pscCFM(fpm)
+
+class(plot_list) <- c("quiet_list", class(plot_list))
+
+
+plot_list
 
