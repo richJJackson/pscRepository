@@ -3,7 +3,7 @@
 ### UNdertaking model validation and saving structures for sharing on github
 
 
-### L
+### Loading packages
 library(knitr)
 library(RColorBrewer)
 library(ggplot2)
@@ -21,12 +21,15 @@ devtools::load_all()
 ### Loading model
 setwd("/Volumes/richj23/Projects/Cancer/HCC/EURAB/May25")
 
-load("AtezoBevmodel_with_types.R")
-
+dir()
+load("Tacemodel_with_types.R")
 
 
 ### Creating model
 CFM <- pscCFM(flexspline_model1)
+
+flexspline_model1
+
 save(CFM,file="atezoBev_CFM.Rds")
 
 CFM$datasumm
