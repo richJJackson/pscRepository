@@ -22,15 +22,12 @@ devtools::load_all()
 setwd("/Volumes/richj23/Projects/Cancer/HCC/EURAB/May25")
 
 dir()
-load("Tacemodel_with_types.R")
+load("AtezoBevmodel_with_types.R")
+
 
 
 ### Creating model
-CFM <- pscCFM(flexspline_model1)
-
-flexspline_model1
-
-save(CFM,file="atezoBev_CFM.Rds")
+save(CFM,file="atecovdatasave(CFM,file="atezoBev_CFM.Rds")
 
 CFM$datasumm
 dev.copy2pdf(file="dataSumm.pdf")
