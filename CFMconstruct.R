@@ -30,10 +30,13 @@ CFM <- pscCFM(flexspline_model1)
 save(CFM,file="atezoBev_CFM.Rds")
 
 CFM$datasumm
+dev.copy2pdf(file="dataSumm.pdf")
 
+ggarrange(plotlist=CFM$datavis,ncol=2,nrow=3)
+ggsave(file="atezo_bev_model_dv.png",height=9,width=6)
 
 ### Creating CFM object
-
+dir.create("Validation")
 
 
 
