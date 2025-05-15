@@ -17,8 +17,10 @@ library(ggpubr)
 library(gtsummary)
 library(forestplot)
 
+
 ###################################################################
 ###################################################################
+
 
 
 ### Getting Model
@@ -61,11 +63,13 @@ model_extract <- CFM
 ############# Overall Comparison
 psc_all <- pscfit(CFM,e4)
 
+
+
 ### Plotting overall effect
 plot(psc_all)
 
 coef(psc_all)
-
+summary(psc_all)
 
 
 ############## Sub-Group analysis
@@ -119,8 +123,6 @@ pt4 <- plot(psc_t4)
 
 ggarrange(pt2,pt3,pt4)
 
-
-e4[1:3,]
 
 ### lca199
 id_c1 <- which(e4$lca199<2.5)
