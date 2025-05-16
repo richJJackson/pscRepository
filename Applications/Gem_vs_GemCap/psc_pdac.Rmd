@@ -1,0 +1,165 @@
+---
+title: "pdac_psc"
+author: "Richard Jackson"
+date: "2025-03-22"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(psc)
+setwd("/Users/richardjackson/Documents/GitHub/pscVis/pscVis")
+devtools::load_all()
+setwd("/Users/richardjackson/Documents/GitHub/psc")
+devtools::load_all()
+library(knitr)
+library(RColorBrewer)
+library(ggplot2)
+library(waffle)
+library(ggpubr)
+
+
+```
+
+
+
+
+## Example
+
+The psc.r package is available for downlaod from CRAN and is obtianed using
+
+```{r}
+#install.packages("psc")
+library(psc)
+```
+
+## PDAC
+
+Pancreatic Cancer is one of the most deadly cancers with over 10,000 new cased 
+per year and a poor prognosis.  For 80% of patients the desease is either locally 
+advanced or metastatic and whilst treatments are available, median survival is 
+just 9 months.
+
+For 20% of patietns, surgery to remove the cancer is an option.  Whilst 
+prognosis improves, median survival remains modest (approx 2 years) with roughly 
+30% of patietns living 5 years or more.
+
+The European Study Group for Pancreatic Cacner (ESPAC) 4 study was a randomised
+controlled trial to compare 2 types of chemotherapy following survery in the 20% 
+who are eligible.  Seven hundred thirty two patients were randomised to two 
+treatments; Gemcitabine (Gem: Control) and Gemcitbine plus Capecitabine 
+(GemCap: Experimental). Ultimately this study was successful and demonstrate 
+that GemCap can increase survival by approximately 3 months [HR= 0.82 
+(0.44, 0.98); P=value=0.039].
+
+The ESPAC4 study followed on fromt he competion of ESPAC3, a smilar study in the 
+same population.  ESPAC3 also 1088 patients, 432 of which were randomised to 
+receive Gemcitbine.
+
+The aim here is to determine if the results of ESPAC4 can be replicated without 
+the patients randomised to receive the control arm (Gem).  Instead a 
+model for Gemcitbine, developed on the ESPAC3 data, will be used. 
+
+Further detials on the use of this approach and discussion on the results have 
+been publishers [REF]. Here we focus on the rocess and code syntax required to 
+perform the analyses.
+
+## Gemcitabine Model (The counter-factual model)
+
+Full details on the setting, construction and the validation of the Gemcitbine 
+model are included here: (https://richjjackson.github.io/mecPortal//models/pdac_gem.html).  
+An Rshiny app has been to further describe the model (http://Need_an_url.com) and
+the model is available for users to download in the github repository at (https://github.com/richJJackson/pscLibrary/tree/main/PDAC/GemVsGemCap)
+CHANGE URL - MODEL ONLY FOLDER
+
+
+NOTE HERE - need pscModel class
+```{r}
+setwd("~/Documents/GitHub/pscLibrary/PDAC/GemVsGemCap")
+load("flexParaGem.R")
+```
+
+This model constructed is a flexible parametric survvial model ('fpm') and has class 
+'flexsurvreg' and standard base functions can be used to explroe the model
+
+```{r}
+print(fpm)
+plot(fpm)
+```
+
+
+## ESPAC 4 data
+
+An anonymised subset of the data from the trial are used for this example and are
+available at (https://github.com/richJJackson/pscLibrary/tree/main/PDAC/GemVsGemCap).
+Data are available in .csv format:
+
+```{r}
+e4 <- read.csv("e4_data_cohort.csv") 
+head(e4)
+```
+
+
+## Summary compariosns
+
+The first step to comparing the espac 4 data to the Gem model is to ensure that 
+the two sources of data are compatible.  In practice the means esnuring that for 
+each covariate in the model, there exists an equivalent covariate in the dataset.
+Care should be applied to ensure that these covaraites match, are vectors of the 
+same class and are measured on the same scale.
+
+The psc.r package includes a function dataComb.r which is contructued to create 
+a single 'cleaned' object which includes both the model and the dataset.  This includes a data_match.R fucntion which has the specific task of cheking the model and the data for compatibility. Both of these functions are included within the pscfit function for performing personalised synthetic contorls analyses and can also be run seperately.
+
+The PSC methodology works on a complete case dataset and any observations with missing data will be removed.  In this example 53 rows of data are removed and a warning message is provided to detail this.
+
+```{r}
+DC_clean <- dataComb(fpm,e4)
+```
+
+Beyond compatibility it is improtant to chekc that the model and the dataset are applied in the same setting.  Whilst some of this comparsions will be qualitative, a useful check can be to check the distribution of the data cohort match this of the data in the  model.  The 'cfmDataComp' provides this as a grpahical summary and we use ggarrange to colate these into a single plot
+
+```{r}
+visComp <- cfmDataComp(fpm,e4)
+ggarrange(visComp[[1]],visComp[[2]],visComp[[3]],visComp[[4]])
+
+```
+
+THe model itself are is available from the Gih
+
+
+
+## pscfit
+
+The main function for perfoming Personalised Synthetic Controls is the pscfit function which requires as a minimum input the counterfactual model and the data cohrot.
+
+NB this will perform the data cleaning routines
+
+
+```{r}
+pdac_psc <- pscfit(fpm,e4)
+```
+
+
+### pscfit options
+
+
+```{r}
+summary(pdac_psc)
+```
+
+
+```{r}
+plot(pdac_psc)
+```
+
+
+* plot
+* summary
+* sub group analysis
+* mulitple treatment effects
+
+
+
+
