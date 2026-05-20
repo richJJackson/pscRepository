@@ -21,7 +21,7 @@ BODY_PT = Pt(18)
 BODY_COMPACT_PT = Pt(16)
 CAPTION_PT = Pt(14)
 
-# Layout (inches) ù 13.33" x 7.5" slide
+# Layout (inches) ÔøΩ 13.33" x 7.5" slide
 ML = 0.55
 MR = 0.55
 TITLE_T = 0.28
@@ -173,7 +173,7 @@ def main():
     for idx in text_only:
         format_text_only_slide(slides[idx], compact=(idx in compact_slides))
 
-    # --- Slide 3: problem ù left text, right figure ---
+    # --- Slide 3: problem ÔøΩ left text, right figure ---
     s3 = slides[2]
     style_title(get_title_shape(s3))
     for sh in s3.shapes:
@@ -183,7 +183,7 @@ def main():
             set_pos(sh, ML, BODY_T, LEFT_W, BODY_H)
             style_body_shape(sh)
 
-    # --- Slide 10: ESPAC ù left bullets, right figure ---
+    # --- Slide 10: ESPAC ÔøΩ left bullets, right figure ---
     s10 = slides[9]
     style_title(get_title_shape(s10))
     for sh in s10.shapes:
@@ -193,7 +193,7 @@ def main():
         elif sh.name == "Content Placeholder 4":
             set_pos(sh, RIGHT_L, FIG_T, RIGHT_W, FIG_H)
 
-    # --- Slide 11: ESPAC step 3 ù left text, right chart ---
+    # --- Slide 11: ESPAC step 3 ÔøΩ left text, right chart ---
     s11 = slides[10]
     style_title(get_title_shape(s11))
     for sh in s11.shapes:
@@ -208,7 +208,7 @@ def main():
             set_pos(sh, ML, 1.75, LEFT_W, 5.2)
             style_body_shape(sh, compact=True)
 
-    # --- Slide 12: HCC ù fix duplicate titles, side-by-side figures ---
+    # --- Slide 12: HCC ÔøΩ fix duplicate titles, side-by-side figures ---
     s12 = slides[11]
     main_title = get_title_shape(s12)
     for sh in list(s12.shapes):
@@ -242,7 +242,7 @@ def main():
         elif sh.name.startswith("Doughnut"):
             set_pos(sh, RIGHT_L, 6.55, RIGHT_W, 0.7)
 
-    # --- Slide 14: IMBRAVE eligibility ù title bar + dual figures ---
+    # --- Slide 14: IMBRAVE eligibility ÔøΩ title bar + dual figures ---
     s14 = slides[13]
     imb_title = None
     for sh in list(s14.shapes):
@@ -275,7 +275,7 @@ def main():
             sh.fill.solid()
             sh.fill.fore_color.rgb = NAVY
 
-    # --- Slides 15-17: Phase II/III ù title, labels, then figures ---
+    # --- Slides 15-17: Phase II/III ÔøΩ title, labels, then figures ---
     for idx in [14, 15, 16]:
         s = slides[idx]
         style_title(get_title_shape(s))
